@@ -9,7 +9,7 @@ import * as sha256 from "fast-sha256";
 export class HomePage {
 digest = ""
   constructor(public navCtrl: NavController) { }
-  hashInput(input){
+  hashInput(new Buffer(input)){
     const hasher = new sha256.Hash();
     hasher.update(input);
     const result = hasher.digest();
