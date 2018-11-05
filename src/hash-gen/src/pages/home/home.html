@@ -10,14 +10,16 @@
   
     <ion-item>
       <ion-label >Input</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text" ngModel='input'></ion-input>
     </ion-item>
   
     <ion-item>
-      <ion-label aria-disabled="true">Hash</ion-label>
-      <ion-input type="text" disabled="true"></ion-input>
+      <ion-label readonly="true">Hash</ion-label>
+      <ion-input type="text" disabled="true" ngModel='digest'></ion-input>
     </ion-item>
   </ion-list>
+
+  <button (click)="hashInput(input)">Blick me</button>
   <p>
     Take a look at the <code>source code/</code> on github/prahaladbelavadi/hash-gen
   </p>
